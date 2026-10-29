@@ -1,0 +1,33 @@
+{
+  "name": "vigie",
+  "version": "1.0.0",
+  "description": "Self-hosted uptime monitoring and public status page. One process, no database, alerts on Discord, Slack, Telegram, ntfy or any webhook.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/vigie.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "uptime",
+    "monitoring",
+    "status-page",
+    "self-hosted",
+    "uptime-monitor",
+    "statuspage",
+    "healthcheck",
+    "express"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CedricPoint/vigie.git"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

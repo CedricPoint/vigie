@@ -1,0 +1,16 @@
+services:
+  vigie:
+    image: ghcr.io/cedricpoint/vigie:latest
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      # Leave empty to choose the password in the browser on first visit (/setup).
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      # Language of the status page and alerts on first start: en or fr.
+      VIGIE_LANG: ${VIGIE_LANG:-en}
+    volumes:
+      - vigie-data:/data
+
+volumes:
+  vigie-data:
